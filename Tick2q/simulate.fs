@@ -52,13 +52,7 @@ module MapEnvt =
         //undone -> delete comment when done
         let newVar = { env.[vName] with Value = newValue }
 
-        let check x var =
-            if x = var.Name then
-                { var with Value = newValue }
-            else
-                var
-
-        Map.map check env
+        Map.add vName newVar env
 
 
 //-------------------------------------------------------
@@ -126,7 +120,7 @@ let wOr (f1: Update) (f2: Update): Update =
                 if (f1 env = f2 env) then
                     Ok Zero
                 else
-                    Ok Zero
+                    Ok One
 
 /// Logic XOR function
 let wXor (f1: Update) (f2: Update): Update =
