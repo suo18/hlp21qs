@@ -86,7 +86,7 @@ let busDecoderView (comp: Component) =
              ])
 
         let std =
-            [ polygon [ SVGAttr.Points "5 0,5 200,150 200,150 0"
+            [ polygon [ SVGAttr.Points "5 0,5 200.20,150 200,150 0"
                         SVGAttr.StrokeWidth "1px"
                         SVGAttr.Stroke "Black"
                         SVGAttr.FillOpacity 0.3
